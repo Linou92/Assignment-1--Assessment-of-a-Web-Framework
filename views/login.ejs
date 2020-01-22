@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+<body>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-5 col-md-4 text-center">
+                    <h1 class='text-white'>Please login here</h1>
+                    <form class="form-login" action="/login" method="post"></br>
+                        <h4>Login</h4>
+                        </br>
+                        <input type="text" id="username" class="form-control input-sm chat-input" placeholder="Username..." name="username" required=""/>
+                        </br></br>
+                        <input type="password" id="password" class="form-control input-sm chat-input" placeholder="Password..." name="password" required=""/>
+                        </br></br>
+                        <input type="submit" class="btn btn-success" value="Login">
+                      </form>
+                </div>
+            </div>
+            </br></br></br>
+        
+            <% include partials/footer %>
+        
+        </div>
+        </body>
+    

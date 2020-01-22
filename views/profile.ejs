@@ -1,0 +1,63 @@
+<% include partials/header %>
+
+          <body>
+          
+                  <!-- Page Content -->
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-offset-5 col-md-4 text-center">
+                              <div class="alert alert-success" role="alert">
+                                  <center><h3>You are now logged in !</h3></center>
+                                 <a class="btn btn-primary btn-md" href="/auth/logout">Logout </a>
+                              </div>
+                            </br></br></br>
+                              <h1> Upload your image on Twitter !</h1>
+                            </br></br></br>
+                              <form class="wrapper" id="fileForm" action="/profile" method="POST" enctype="multipart/form-data">
+                                  <span class="group-btn">
+                                      <input type="file" required accept=".jpg, .jpeg, .gif, .png" name="file" id="file" class="btn btn-primary btn-lg"></input>
+                                      <output id="result"></output>
+                                      <label>Text tweet :</label>
+                                      <br>
+                                      <textarea required style="font-size: 18px" rows="4" maxlength="140" name="tweetText" cols="50" placeholder="Write your tweet here (required)..."></textarea>
+                                        <script>
+                                        if (window.FileReader) {
+                                        function handleFileSelect(evt) {
+                                            var files = evt.target.files;
+                                            var f = files[0];
+                                            var reader = new FileReader();
+                                            
+                                            reader.onload = (function(theFile) {
+                                                return function(e) {
+                                                document.getElementById('result').innerHTML = ['<img src="', e.target.result,'" title="', theFile.name, '" width="300"/>'].join('');
+                                                };
+                                            })(f);
+                                        
+                                            reader.readAsDataURL(f);
+                                        }
+                                        } else {
+                                        alert('This browser does not support FileReader');
+                                        }
+                                        
+                                        document.getElementById('file').addEventListener('change', handleFileSelect, false);
+                                        </script>
+                                  </br>
+                                      <input type="submit" onclick="popup()" class="btn btn-primary btn-lg" value="Submit"> <i class="fa fa-sign-in"></i></input>
+                                      <script>
+                                        function popup() {
+                                          
+                                          if (confirm("Your media has been posted on Twitter ! Go and check it on https://twitter.com/LinouTest?lang=fr !")) {
+                                          } 
+                                        }
+                                        </script>
+                                  </span>
+                                </form>
+                          </div>
+                      </div>
+                      </br></br></br>
+                  
+                      <% include partials/footer %>
+                  
+                  </div>
+            </body>
+              

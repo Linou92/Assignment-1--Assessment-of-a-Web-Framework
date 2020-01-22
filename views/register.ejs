@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+<body>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-5 col-md-4 text-center">
+                    <h1 class='text-white'>Please register here</h1>
+                    <form class="form-login" action="/register" method="post"></br>
+                        <h4>Sign Up</h4>
+                        </br>
+                        <input type="text" id="username" class="form-control input-sm chat-input" placeholder="Username..." name="username" required=""/>
+                        </br></br>
+                        <input type="password" id="password" class="form-control input-sm chat-input" placeholder="Password..." name="password" required=""/>
+                        </br></br>
+                        <input type="password" name="passwordConf" class="form-control input-sm chat-input" placeholder="Confirm Password..." required="">
+                        <br><br>
+                        <button type="submit" class="btn btn-success" >Submit</button>
+                        Already have an account? <a href="/login"> Login here !</a>
+                      </form>
+                </div>
+            </div>
+            </br></br></br>
+        
+            <% include partials/footer %>
+        
+        </div>
+</body>
+    

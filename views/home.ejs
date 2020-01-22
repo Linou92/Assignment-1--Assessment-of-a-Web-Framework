@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+<body>
+        <center><h1>Welcome to the website where you can upload images on Twitter</h1></center>
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+            <h1 class='text-white'>Login Form</h1>
+            <form class="form-login" action="/login" method="post"></br>
+                <h4>Please Login Here</h4>
+                </br>
+                <input type="text" id="username" class="form-control input-sm chat-input" placeholder="Username" name="username" required=""/>
+                </br></br>
+                <input type="password" id="password" class="form-control input-sm chat-input" placeholder="Password" name="password" required=""/>
+                </br></br>
+                <div class="wrapper">
+                        <span class="group-btn">
+                            <button type="submit" class="btn btn-primary btn-lg" >Login <i class="fa fa-sign-in"></i></button>
+                            Need an account? <a href="/register">Register here !</a>
+                        </span>
+                </div>
+              </form>
+        </div>
+    </div>
+    </br></br></br>
+
+    <% include partials/footer %>
+
+</div>
+</body>
+</html>
