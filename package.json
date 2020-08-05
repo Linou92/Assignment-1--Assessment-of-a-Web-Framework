@@ -17,7 +17,7 @@
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.2.1",
     "cookie-parser": "^1.4.3",
-    "express-fileupload": "^1.1.1-alpha.1",
+    "express-fileupload": "^1.1.9",
     "express-hbs": "^2.0.1",
     "express-session": "^1.15.6",
     "express-validator": "^5.3.1",
